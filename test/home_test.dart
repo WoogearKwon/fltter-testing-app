@@ -4,6 +4,8 @@ import 'package:flutter_test_app/screens/home.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+/// [command to run test] - from project's root directory
+/// flutter run test/home_test.dart
 Widget createHomeScreen() => ChangeNotifierProvider<Favorites>(
       create: (context) => Favorites(),
       child: const MaterialApp(

@@ -10,6 +10,8 @@ import 'package:flutter_test_app/screens/favorites.dart';
 
 late Favorites favoritesList;
 
+/// [command to run test] - from project's root directory
+/// flutter test test/home_test.dart
 Widget createFavoritesScreen() => ChangeNotifierProvider<Favorites>(
   create: (context) {
     favoritesList = Favorites();
