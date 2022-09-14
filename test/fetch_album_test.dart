@@ -9,7 +9,7 @@ import 'fetch_album_test.mocks.dart';
 
 // Generate a MockClient using the Mockito package.
 // 아래 명령어로 mock 파일 생성
-// flutter pub run build_runner build
+// flutter pub run build_runner build --delete-conflicting-outputs
 @GenerateMocks([http.Client])
 void main() {
   group('fetchAlbum', () {
@@ -24,7 +24,6 @@ void main() {
           http.Response('{"userId": 1, "id": 2, "title": "mock"}', 200));
 
       expect(await fetchAlbum(client), isA<Album>());
-      // expect((await fetchAlbum(client)).title, 'mock');
     });
 
     test('http 호출에서 에러가 발생하면 예외를 던진다', () async {
